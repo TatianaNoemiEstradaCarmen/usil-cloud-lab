@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Página informativa del curso Cloud Computing de USIL.">
+  <title>Cloud Computing | USIL</title>
+  <style>
+    :root { color-scheme: light; --navy: #102a43; --blue: #1769aa; --cyan: #35c2d1; --ink: #243b53; --muted: #52677d; --paper: #f4f8fb; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--paper); line-height: 1.65; }
+    a { color: inherit; }
+    .topbar { padding: 1rem max(1.25rem, calc((100% - 1100px)/2)); display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: white; }
+    .brand { font-weight: 800; letter-spacing: .06em; color: var(--navy); }
+    .topbar nav { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .topbar nav a { text-decoration: none; font-size: .95rem; color: var(--muted); }
+    .hero { color: white; background: radial-gradient(circle at 80% 20%, #2b91bb 0, transparent 32%), linear-gradient(125deg, #102a43, #1769aa); padding: clamp(4rem, 10vw, 7.5rem) max(1.25rem, calc((100% - 1100px)/2)); }
+    .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .8rem; font-weight: 700; color: #a9f2f3; }
+    h1 { max-width: 760px; margin: .5rem 0 1rem; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.04; }
+    .hero p { max-width: 680px; font-size: 1.15rem; color: #e4f1fa; }
+    .button { display: inline-block; margin-top: 1rem; padding: .8rem 1.15rem; border-radius: .55rem; background: var(--cyan); color: #082b3a; font-weight: 750; text-decoration: none; }
+    main { width: min(1100px, calc(100% - 2.5rem)); margin: auto; }
+    section { padding: 4rem 0; }
+    h2 { color: var(--navy); font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.2; margin: 0 0 1rem; }
+    .lead { max-width: 760px; color: var(--muted); font-size: 1.08rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.7rem; }
+    .card { padding: 1.35rem; border: 1px solid #dce7ef; border-radius: .9rem; background: white; box-shadow: 0 8px 24px #102a430c; }
+    .card h3 { margin: 0 0 .5rem; color: var(--blue); }
+    .icon { font-size: 1.7rem; }
+    .band { width: 100%; background: #e5f3f7; }
+    .band-inner { width: min(1100px, calc(100% - 2.5rem)); margin: auto; padding: 3.25rem 0; }
+    .steps { counter-reset: step; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .step { background: white; padding: 1.2rem; border-radius: .8rem; }
+    .step::before { counter-increment: step; content: "0" counter(step); color: var(--blue); font-weight: 800; font-size: 1.25rem; }
+    .course { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2rem; align-items: center; }
+    .course-box { border-radius: 1rem; padding: 1.5rem; color: white; background: var(--navy); }
+    .course-box strong { display: block; color: #a9f2f3; margin-bottom: .3rem; }
+    footer { background: var(--navy); color: #d8e7f2; padding: 1.5rem max(1.25rem, calc((100% - 1100px)/2)); font-size: .9rem; }
+    @media (max-width: 720px) { .grid, .steps { grid-template-columns: 1fr; } .course { grid-template-columns: 1fr; } .topbar { align-items: flex-start; flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">USIL · CLOUD COMPUTING</div>
+    <nav aria-label="Navegación principal"><a href="#concepto">Concepto</a><a href="#servicios">Servicios</a><a href="#curso">El curso</a></nav>
+  </header>
+  <section class="hero">
+    <div class="eyebrow">Tecnología que conecta ideas</div>
+    <h1>Cloud Computing</h1>
+    <p>Una introducción a la computación en la nube: recursos digitales disponibles bajo demanda para crear, almacenar y ofrecer servicios con flexibilidad.</p>
+    <a class="button" href="#concepto">Conoce más ↓</a>
+  </section>
+  <main>
+    <section id="concepto">
+      <h2>¿Qué es la computación en la nube?</h2>
+      <p class="lead">Es el acceso a recursos informáticos —como servidores, almacenamiento, redes y software— a través de internet. En lugar de administrar toda la infraestructura localmente, una organización puede utilizar servicios de un proveedor cloud y ajustar su capacidad según sus necesidades.</p>
+      <div class="grid">
+        <article class="card"><div class="icon" aria-hidden="true">☁️</div><h3>Acceso bajo demanda</h3><p>Los recursos se solicitan cuando hacen falta y pueden administrarse desde distintos lugares con conexión a internet.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">📈</div><h3>Escalabilidad</h3><p>La capacidad puede aumentar o disminuir para responder a cambios en la actividad y la demanda.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">🧩</div><h3>Servicios gestionados</h3><p>El proveedor opera parte de la infraestructura, mientras el equipo se concentra en sus aplicaciones y datos.</p></article>
+      </div>
+    </section>
+  </main>
+  <div class="band" id="servicios"><div class="band-inner">
+    <h2>Modelos de servicio</h2>
+    <p class="lead">Los servicios cloud se suelen agrupar según el nivel de control y administración que recibe el cliente.</p>
+    <div class="grid">
+      <article class="card"><h3>IaaS</h3><p><strong>Infraestructura como servicio.</strong> Ofrece recursos virtualizados, como máquinas, redes y discos. El cliente administra el sistema operativo y sus aplicaciones.</p></article>
+      <article class="card"><h3>PaaS</h3><p><strong>Plataforma como servicio.</strong> Proporciona un entorno administrado para desarrollar y desplegar aplicaciones sin gestionar directamente toda la infraestructura.</p></article>
+      <article class="card"><h3>SaaS</h3><p><strong>Software como servicio.</strong> Permite utilizar aplicaciones listas a través de internet, normalmente desde un navegador o una app.</p></article>
+    </div>
+  </div></div>
+  <main>
+    <section>
+      <h2>De una idea a una aplicación disponible</h2>
+      <p class="lead">Un despliegue con contenedores empaqueta una aplicación y sus dependencias para que se ejecute de manera consistente en distintos entornos.</p>
+      <div class="steps">
+        <article class="step"><h3>Crear</h3><p>Se prepara el código de la aplicación y una receta que describe cómo construirla.</p></article>
+        <article class="step"><h3>Empaquetar</h3><p>Docker crea una imagen que puede almacenarse y compartirse en un registro de contenedores.</p></article>
+        <article class="step"><h3>Desplegar</h3><p>Una plataforma cloud ejecuta la imagen y puede exponer la aplicación mediante una dirección web.</p></article>
+      </div>
+    </section>
+    <section id="curso" class="course">
+      <div><h2>Cloud Computing en USIL</h2><p class="lead">Este sitio es un recurso introductorio para el curso de Cloud Computing de la Universidad San Ignacio de Loyola. La actividad permite recorrer el flujo práctico de una aplicación web: código, contenedor, registro y despliegue en la nube.</p></div>
+      <aside class="course-box"><strong>Curso</strong>Desarrollo de Sistemas Empresariales<br><br><strong>Facultad</strong>Ingeniería e Inteligencia Artificial<br><br><strong>Programa</strong>Ingeniería de Sistemas de Información</aside>
+    </section>
+  </main>
+  <footer><p>Material educativo · Curso de Cloud Computing · Universidad San Ignacio de Loyola (USIL)</p></footer>
+</body>
+</html>
